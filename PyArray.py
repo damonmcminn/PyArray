@@ -62,3 +62,7 @@ class PyArray(list):
     def find_index(self, fn):
         item, index = self._find(fn)
         return index
+
+    def join(self, separator=','):
+        strings = [str(item) for item in self]
+        return separator.join(strings)
